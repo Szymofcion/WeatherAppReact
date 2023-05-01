@@ -53,6 +53,7 @@ body {
   align-items: center;
   flex-direction: column;
   margin: 2em auto;
+  border-radius: 15px;
   padding-bottom: 2em;
   box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
   height: 100%;
@@ -63,6 +64,10 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+}
+.modal__container--top button {
+  border: none;
+  background: #fff;
 }
 .modal__container--top h2 {
   margin-left: 1em;
@@ -81,6 +86,10 @@ body {
   align-items: center;
   margin-top: 0.6em;
   width: 90%;
+}
+.modal__container--bottom button {
+  border: none;
+  background: #fff;
 }
 .modal__container--bottom input {
   width: 100%;
@@ -101,4 +110,8 @@ body {
   margin-left: 0.4em;
   font-size: 1.4em;
   color: lightskyblue;
+}
+
+.visible {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

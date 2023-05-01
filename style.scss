@@ -45,11 +45,13 @@ body {
     }
   }
 }
+
 .modal__container {
   display: flex;
   align-items: center;
   flex-direction: column;
   margin: 2em auto;
+  border-radius: 15px;
   padding-bottom: 2em;
   box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
   height: 100%;
@@ -59,6 +61,10 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    button {
+      border: none;
+      background: #fff;
+    }
     h2 {
       margin-left: 1em;
     }
@@ -69,14 +75,18 @@ body {
       color: rgb(224, 176, 16);
     }
     .fa-circle-xmark:hover {
-       color: rgb(184, 146, 21);
-      }
+      color: rgb(184, 146, 21);
+    }
   }
   &--bottom {
     display: flex;
     align-items: center;
     margin-top: 0.6em;
     width: 90%;
+    button {
+      border: none;
+      background: #fff;
+    }
     input {
       width: 100%;
       margin-left: 1em;
@@ -94,4 +104,7 @@ body {
       color: lightskyblue;
     }
   }
+}
+.visible{
+  display: none;
 }
