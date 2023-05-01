@@ -1,0 +1,104 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.fa-sun {
+  color: rgb(224, 176, 16);
+  font-size: 1.4em;
+}
+
+.nav__container {
+  padding: 0.4em;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.5em;
+  height: 100%;
+  width: 100%;
+  border-bottom: 1px solid rgb(228, 222, 222);
+}
+.nav__container__logo {
+  display: flex;
+  align-items: center;
+}
+.nav__container__logo--text {
+  font-weight: bold;
+  margin-left: 0.8em;
+}
+.nav__container__button {
+  display: flex;
+  align-items: center;
+}
+.nav__container__button--style {
+  cursor: pointer;
+  width: 10em;
+  height: 2.3em;
+  border-radius: 15px;
+  border: none;
+  background-color: rgb(224, 176, 16);
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.8em;
+  transition: border, background-color, color 0.4s;
+}
+.nav__container__button--style:hover {
+  border: 2px solid rgb(224, 176, 16);
+  background-color: #fff;
+  color: rgb(224, 176, 16);
+}
+
+.modal__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 2em auto;
+  padding-bottom: 2em;
+  box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
+  height: 100%;
+  width: 55%;
+}
+.modal__container--top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.modal__container--top h2 {
+  margin-left: 1em;
+}
+.modal__container--top .fa-circle-xmark {
+  cursor: pointer;
+  margin-right: 1em;
+  font-size: 1.7em;
+  color: rgb(224, 176, 16);
+}
+.modal__container--top .fa-circle-xmark:hover {
+  color: rgb(184, 146, 21);
+}
+.modal__container--bottom {
+  display: flex;
+  align-items: center;
+  margin-top: 0.6em;
+  width: 90%;
+}
+.modal__container--bottom input {
+  width: 100%;
+  margin-left: 1em;
+  height: 2em;
+  border: 1px solid rgba(211, 211, 211, 0.863);
+}
+.modal__container--bottom input::-moz-placeholder {
+  padding: 1em;
+  color: rgb(165, 161, 161);
+}
+.modal__container--bottom input::placeholder {
+  padding: 1em;
+  color: rgb(165, 161, 161);
+}
+.modal__container--bottom i {
+  cursor: pointer;
+  margin-left: 0.4em;
+  font-size: 1.4em;
+  color: lightskyblue;
+}/*# sourceMappingURL=style.css.map */

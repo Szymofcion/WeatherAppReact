@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherApp</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/d8a1b0ce33.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="nav__container">
+      <div class="nav__container__logo">
+        <i class="fa-solid fa-sun"></i>
+        <p class="nav__container__logo--text"><em>WeatherApp.com</em></p>
+      </div>
+      <div class="nav__container__button">
+        <button class="nav__container__button--style">
+          Dodaj miasto <i class="fa-solid fa-circle-plus"></i>
+        </button>
+      </div>
+    </nav>
+    <section class="modal__container">
+      <div class="modal__container--top">
+        <h2>Znajdź miasto</h2>
+        <i class="fa-solid fa-circle-xmark"></i>
+      </div>
+      <div class="modal__container--bottom">
+        <input type="text" placeholder="Wpisz miasto"/>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </section>
+  </body>
+</html>
