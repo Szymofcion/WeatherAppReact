@@ -114,4 +114,77 @@ body {
 
 .visible {
   display: none;
+}
+
+.vh100 {
+  height: 100vh;
+  background: lightgreen;
+}
+
+li {
+  list-style: none;
+}
+
+.currentImg {
+  width: 8em;
+  height: 8em;
+}
+
+.cities__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 2em auto;
+  border-radius: 15px;
+  padding-bottom: 2em;
+  box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
+  height: 100%;
+  width: 55%;
+}
+.cities__container button {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  border: none;
+  background: #fff;
+}
+.cities__container .fa-circle-xmark {
+  cursor: pointer;
+  margin-right: 1em;
+  font-size: 1.7em;
+  color: rgb(224, 176, 16);
+}
+.cities__container .fa-circle-xmark:hover {
+  color: rgb(184, 146, 21);
+}
+.cities__container__top {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cities__container__top .fa-cloud-sun {
+  font-size: 4.7em;
+  margin-right: 0.5em;
+}
+.cities__container__top--info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 1em;
+}
+.cities__container__top--info p {
+  font-size: 1.4em;
+  margin: 0;
+}
+.cities__container__top--info span {
+  font-size: 2.4em;
+  font-weight: bold;
+}
+.cities__container__bottom {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2em;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

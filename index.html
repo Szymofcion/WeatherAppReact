@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body class="loading">
     <nav class="nav__container">
       <div class="nav__container__logo">
         <i class="fa-solid fa-sun"></i>
@@ -24,7 +24,7 @@
         </button>
       </div>
     </nav>
-    <section class="modal__container " id="modal__container">
+    <section class="modal__container" id="modal__container">
       <div class="modal__container--top">
         <h2>Znajdź miasto</h2>
         <button class="modal__container--close">
@@ -32,11 +32,63 @@
         </button>
       </div>
       <div class="modal__container--bottom">
-        <input type="text" placeholder="Wpisz miasto" />
+        <input id="city" type="text" placeholder="Wpisz miasto" />
         <button class="modal__container--magnifying">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
     </section>
+
+    <section class="cities__container">
+      <button class="cities__container--close">
+        <i class="fa-solid fa-circle-xmark"></i>
+      </button>
+
+      <div class="cities__container__top">
+        <img src="" alt="pogoda" class="currentImg" />
+        <div class="cities__container__top--info">
+          <p class="cityName"></p>
+          <span class="temp"></span>
+        </div>
+        <div class="cities__container__top--specification">
+          <ul>
+            <li class="currentPressure"></li>
+            <li class="currentHumidity"></li>
+            <li class="currentWind"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="cities__container__bottom">
+        <ul>
+          <li>dzien</li>
+          <li>pogoda</li>
+          <li>stopnie</li>
+        </ul>
+        <ul>
+          <li>dzien</li>
+          <li>pogoda</li>
+          <li>stopnie</li>
+        </ul>
+        <ul>
+          <li>dzien</li>
+          <li>pogoda</li>
+          <li>stopnie</li>
+        </ul>
+        <ul>
+          <li>dzien</li>
+          <li>pogoda</li>
+          <li>stopnie</li>
+        </ul>
+        <ul>
+          <li>dzien</li>
+          <li>pogoda</li>
+          <li>stopnie</li>
+        </ul>
+      </div>
+    </section>
+    <div class="loading">
+      <div class="dual-ring"></div>
+    </div>
+    <div class="vh100"></div>
   </body>
 </html>
