@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WeatherApp</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <script defer src="./app.js"></script>
-    <script
-      src="https://kit.fontawesome.com/d8a1b0ce33.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body class="loading">
-    <nav class="nav__container">
-      <div class="nav__container__logo">
-        <i class="fa-solid fa-sun"></i>
-        <p class="nav__container__logo--text"><em>WeatherApp.com</em></p>
-      </div>
-      <div class="nav__container__button">
-        <button class="nav__container__button--style">
-          Dodaj miasto <i class="fa-solid fa-circle-plus"></i>
-        </button>
-      </div>
-    </nav>
-    <section class="modal__container" id="modal__container">
-      <div class="modal__container--top">
-        <h2>Znajdź miasto</h2>
-        <button class="modal__container--close">
-          <i class="fa-solid fa-circle-xmark"></i>
-        </button>
-      </div>
-      <div class="modal__container--bottom">
-        <input id="city" type="text" placeholder="Wpisz miasto" />
-        <button class="modal__container--magnifying">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-      </div>
-    </section>
 
-    <section class="cities__container">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WeatherApp</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <script defer src="./app.js"></script>
+  <script src="https://kit.fontawesome.com/d8a1b0ce33.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="loading">
+  <nav class="nav__container">
+    <div class="nav__container__logo">
+      <i class="fa-solid fa-sun"></i>
+      <p class="nav__container__logo--text"><em>WeatherApp.com</em></p>
+    </div>
+    <div class="nav__container__button">
+      <button class="nav__container__button--style">
+        Dodaj miasto <i class="fa-solid fa-circle-plus"></i>
+      </button>
+    </div>
+  </nav>
+  <section class="modal__container" id="modal__container">
+    <div class="modal__container--top">
+      <h2>Znajdź miasto</h2>
+      <button class="modal__container--close">
+        <i class="fa-solid fa-circle-xmark"></i>
+      </button>
+    </div>
+    <div class="modal__container--bottom">
+      <input id="city" type="text" placeholder="Wpisz miasto" />
+      <button class="modal__container--magnifying">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+  </section>
+
+  <section class="section__city">
+    <!-- <div class="cities__container">
       <button class="cities__container--close">
         <i class="fa-solid fa-circle-xmark"></i>
       </button>
@@ -60,15 +60,16 @@
       </div>
       <div class="cities__container__bottom">
         <ul class="ul">
-          <li class="day">dzien</li>
+          <li class="day"></li>
           <li class="weather"><img class="icons" src="" alt="pogoda"></li>
-          <li class="tempDays">stopnie</li>
+          <li class="tempDays"></li>
         </ul>
       </div>
-    </section>
-    <div class="loading">
-      <div class="dual-ring"></div>
-    </div>
-    <div class="vh100"></div>
-  </body>
+    </div> -->
+  </section>
+  <div class="loading">
+    <div class="dual-ring"></div>
+  </div>
+</body>
+
 </html>
