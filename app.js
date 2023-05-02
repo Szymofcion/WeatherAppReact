@@ -3,18 +3,6 @@ const modalContainer = document.querySelector('#modal__container')
 const btnAddCities = document.querySelector('.nav__container__button--style')
 const btnCloseModal = document.querySelector('.modal__container--close')
 const magnifying = document.querySelector('.modal__container--magnifying')
-const currentImg = document.querySelector('.currentImg')
-const cityName = document.querySelector('.cityName')
-const currentTemp = document.querySelector('.temp')
-const currentPressure = document.querySelector('.currentPressure')
-const currentHumidity = document.querySelector('.currentHumidity')
-const currentWind = document.querySelector('.currentWind')
-const containerBottom = document.querySelector('.cities__container__bottom')
-const ul = document.querySelector('.ul')
-const nextDay = document.querySelector('.day')
-const weather = document.querySelector('.weather')
-const tempDays = document.querySelector('.tempDays')
-const icons = document.querySelector('.icons')
 
 const modalOpen = () => {
 	modalContainer.classList.remove('visible')
@@ -22,8 +10,11 @@ const modalOpen = () => {
 const modalClose = () => {
 	modalContainer.classList.add('visible')
 }
+const closeCity = () => {
+	cityDiv.classList.add('visible')
+}
 
-const cityDivGenerator = () => {
+const weatherApp = async () => {
 	const cityDiv = document.querySelector('.section__city')
 
 	const newDiv = document.createElement('div')
@@ -60,10 +51,10 @@ const cityDivGenerator = () => {
 	liWind.setAttribute('class', 'currentWind')
 	divBotton.setAttribute('class', 'cities__container__bottom')
 	newUl.setAttribute('class', 'ul')
-  liDay.setAttribute('class', 'day')
-  liWeather.setAttribute('class', 'weather')
-  imgIcon.setAttribute('class', 'icons')
-  liTempDays.setAttribute('class', 'tempDays')
+	liDay.setAttribute('class', 'day')
+	liWeather.setAttribute('class', 'weather')
+	imgIcon.setAttribute('class', 'icons')
+	liTempDays.setAttribute('class', 'tempDays')
 
 	cityDiv.appendChild(newDiv)
 	newDiv.append(newBtn)
@@ -80,19 +71,18 @@ const cityDivGenerator = () => {
 	ul.appendChild(liWind)
 	newDiv.appendChild(divBotton)
 	divBotton.appendChild(newUl)
-  newUl.append(liDay)
-  newUl.append(liWeather)
-  liWeather.append(imgIcon)
-  newUl.append(liTempDays)
-}
+	newUl.append(liDay)
+	newUl.append(liWeather)
+	liWeather.append(imgIcon)
+	newUl.append(liTempDays)
 
-const weatherApp = async () => {
 	let cityValue = document.querySelector('#city').value
+
 	try {
 		const result = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${cityValue}&days=5
 `)
-		const data = await result.json()
 
+		const data = await result.json()
 		const weatherImg = data.current.condition.icon
 		const city = data.location.name
 		const temp = data.current.temp_c
@@ -102,31 +92,32 @@ const weatherApp = async () => {
 		const wind_dir = data.current.wind_dir
 		const day = data.forecast.forecastday
 
-		day.forEach(data => {
+		day.map((data) => {
 			const days = data.date
 			const weathers = data.day.condition.icon
 			const temps = data.day.avgtemp_c
-			const newUl = document.createElement('ul')
-			const newLi = document.createElement('li')
-			ul.appendChild(newUl)
-			containerBottom.appendChild(newLi)
-			nextDay.innerHTML = days
-			icons.setAttribute('src', weathers)
-			tempDays.innerHTML = temps
+
+			divBotton.appendChild(newUl)
+			liDay.innerHTML = days
+			imgIcon.setAttribute('src', weathers)
+			liTempDays.innerHTML = temps
+
+			const allData = { days, weathers, temps }
+			// console.log(allData)
+			
 		})
 
-		currentImg.setAttribute('src', weatherImg)
-		cityName.innerHTML = city
-		currentTemp.innerHTML = `${temp} °C`
-		currentPressure.innerHTML = `${pressure} hPa`
-		currentHumidity.innerHTML = `${humidity} %`
-		currentWind.innerHTML = `${wind_dir} ${wind} m/s`
+		img.setAttribute('src', weatherImg)
+		newParagraph.innerHTML = city
+		newSpan.innerHTML = `${temp} °C`
+		liPressure.innerHTML = `${pressure} hPa`
+		liHumidity.innerHTML = `${humidity} %`
+		liWind.innerHTML = `${wind_dir} ${wind} m/s`
 	} catch (err) {
 		console.log(err)
 	}
 }
 
-magnifying.addEventListener('click', cityDivGenerator, weatherApp)
-
+magnifying.addEventListener('click', weatherApp)
 btnAddCities.addEventListener('click', modalOpen)
 btnCloseModal.addEventListener('click', modalClose)
