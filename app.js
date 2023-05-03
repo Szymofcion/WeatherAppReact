@@ -4,6 +4,14 @@ const btnAddCities = document.querySelector('.nav__container__button--style')
 const btnCloseModal = document.querySelector('.modal__container--close')
 const magnifying = document.querySelector('.modal__container--magnifying')
 
+window.addEventListener('load', () => {
+	const loader = document.querySelector('.loader')
+	loader.classList.add('.loader-hidden')
+	// loader.addEventListener('transitionend', () => {
+	// 	document.body.removeChild('loader')
+	// })
+})
+
 const modalOpen = () => {
 	modalContainer.classList.remove('visible')
 }
@@ -92,7 +100,7 @@ const weatherApp = async () => {
 		const wind_dir = data.current.wind_dir
 		const day = data.forecast.forecastday
 
-		day.map((data) => {
+		day.map(data => {
 			const days = data.date
 			const weathers = data.day.condition.icon
 			const temps = data.day.avgtemp_c
@@ -103,8 +111,7 @@ const weatherApp = async () => {
 			liTempDays.innerHTML = temps
 
 			const allData = { days, weathers, temps }
-			// console.log(allData)
-			
+		
 		})
 
 		img.setAttribute('src', weatherImg)
