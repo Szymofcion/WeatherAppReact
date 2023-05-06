@@ -110,7 +110,7 @@ const weatherApp = async () => {
 			imgIcon.setAttribute('src', weathers)
 			liTempDays.innerHTML = temps
 
-			const allData = { days, weathers, temps }
+			// const allData = { days, weathers, temps }
 		
 		})
 
@@ -126,5 +126,6 @@ const weatherApp = async () => {
 }
 
 magnifying.addEventListener('click', weatherApp)
+
 btnAddCities.addEventListener('click', modalOpen)
 btnCloseModal.addEventListener('click', modalClose)
