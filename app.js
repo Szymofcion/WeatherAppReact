@@ -22,7 +22,11 @@ const closeCity = () => {
   cityDiv.classList.add("visible");
 };
 
+
+
 const weatherApp = async () => {
+  const body = document.querySelector('body')
+  
   const cityDiv = document.querySelector(".section__city");
 
   const newDiv = document.createElement("div");
@@ -57,7 +61,7 @@ const weatherApp = async () => {
   liWind.setAttribute("class", "currentWind");
   divBotton.setAttribute("class", "cities__container__bottom");
 
-  cityDiv.appendChild(newDiv);
+  cityDiv.prepend(newDiv);
   newDiv.append(newBtn);
   newBtn.append(circleExit);
   newDiv.append(newDivTop);
@@ -71,6 +75,10 @@ const weatherApp = async () => {
   ul.appendChild(liHumidity);
   ul.appendChild(liWind);
   newDiv.appendChild(divBotton);
+
+  // circleExit.addEventListener('click',()=>{
+  //   body.removeChild()
+  // })
 
   let cityValue = document.querySelector("#city").value;
 
@@ -108,12 +116,12 @@ const weatherApp = async () => {
       const imgIcon = document.createElement("img");
       liWeather.setAttribute("class", "weather");
       imgIcon.setAttribute("src", weathers);
-	  newUl.append(liWeather)
+      newUl.append(liWeather);
       liWeather.append(imgIcon);
 
       const liTempDays = document.createElement("li");
       liTempDays.setAttribute("class", "tempDays");
-      liTempDays.innerHTML = temps + '°C';
+      liTempDays.innerHTML = temps + "°C";
       newUl.append(liTempDays);
     });
 
