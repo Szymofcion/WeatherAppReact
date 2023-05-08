@@ -76,9 +76,9 @@ const weatherApp = async () => {
   ul.appendChild(liWind);
   newDiv.appendChild(divBotton);
 
-  // circleExit.addEventListener('click',()=>{
-  //   body.removeChild()
-  // })
+  circleExit.addEventListener('click',()=>{
+    newDiv.remove()
+  })
 
   let cityValue = document.querySelector("#city").value;
 
